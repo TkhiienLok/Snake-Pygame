@@ -1,0 +1,6 @@
+*.pyc
+__pycache__
+snake_env
+.idea/workspace.xml
+.idea/tasks.xml
+
