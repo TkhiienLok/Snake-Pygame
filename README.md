@@ -1,5 +1,5 @@
 # Snake-Pygame
-This is the basic version of snake game. As it moves forward, it leaves a trail behind, resembling a moving snake.
+This is a basic version of snake game. As it moves forward, it leaves a trail behind, resembling a moving snake.
 The player loses when the snake runs into the screen border (there are four walls around the screen) or itself. Snake has 5 lives. 
 A sole player attempts to eat apples by running into them. Each apple eaten makes the snake longer and adds points. Big apples give more points.
 
