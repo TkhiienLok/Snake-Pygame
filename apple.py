@@ -8,8 +8,8 @@ class Apple:
     count = 0
 
     def __init__(self, size):
-        self.x = randrange(1, COL_COUNT)  # random horizontal position
-        self.y = randrange(1, ROW_COUNT)  # random vertical position
+        self.x = randrange(1, COL_COUNT-1)  # random horizontal position
+        self.y = randrange(1, ROW_COUNT-1)  # random vertical position
         self.size = size
         self.rect = pygame.Rect(self.x * CELL_SIZE, self.y * CELL_SIZE, self.size, self.size)
         

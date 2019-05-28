@@ -12,13 +12,13 @@ class Snake(pygame.sprite.Sprite):
         self.body = [[COL_COUNT // 2, ROW_COUNT // 2],
                      [COL_COUNT // 2, ROW_COUNT // 2 + 1],
                      [COL_COUNT // 2, ROW_COUNT // 2 + 2]]
-        self.direction = [0, -1]
+        self.direction = [-1, 0]
         self.old_key = ""
         self.speed = 10
         self.lives = 5
         self.points = 0
 
-    def set_direction (self, key):  # change the direction of snake
+    def set_direction(self, key):  # change the direction of snake
         if self.old_key == key:
             self.speed = 20
         # if snake's not moving down then turn up
@@ -41,6 +41,8 @@ class Snake(pygame.sprite.Sprite):
     def move(self):
         self.body.insert(0, [self.body[0][0] + self.direction[0],
                              self.body[0][1] + self.direction[1]])  # add a "cell" to the head according to direction
+        self.body[0][0] = self.body[0][0] % COL_COUNT
+        self.body[0][1] = self.body[0][1] % ROW_COUNT
 
     def draw(self, screen):
         for elem in self.body:
@@ -60,11 +62,6 @@ class Snake(pygame.sprite.Sprite):
 
     def hit_walls(self, walls):
         hit = False
-
-            #apple.set_random_xy()
-            #if self.lives == 0:
-                #game_over = True
-                #print_text(LARGE_FONT, "GAME OVER", RED)
 
         for wall in walls:  # check hitting the walls
             head_rect = pygame.Rect(self.body[0][0] * CELL_SIZE, self.body[0][1] * CELL_SIZE, CELL_SIZE, CELL_SIZE)

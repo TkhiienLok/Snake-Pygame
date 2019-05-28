@@ -155,13 +155,14 @@ def main():
             else:
                 hero.body.pop()  # delete the ending tile of the snake
 
-        if hero.hit_walls(walls_list):  # check if snake hits the walls of itself
+        if hero.hit_walls(walls_list):  # check if snake hits the walls or itself
             apple.set_random_xy()
-            if hero.lives == 0:
+            if hero.lives <= 0:
                 game_over = True
                 print_text(LARGE_FONT, "GAME OVER", RED)
 
         clock.tick(hero.speed)  # FPS
+        #clock.tick(5)  # FPS
 
         pygame.display.flip()  # update the screen
         if game_over:
