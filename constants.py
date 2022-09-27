@@ -1,3 +1,5 @@
+import os
+
 W = 480  # screen width
 H = 320  # screen height
 
@@ -5,7 +7,7 @@ CELL_SIZE = 10
 COL_COUNT = W // CELL_SIZE  # column number - width in cells
 ROW_COUNT = H // CELL_SIZE  # column number - height in cells
 
-image = r'images\part.png'  # snake tile
+image = os.path.join("images", "part.png")  # snake tile
 
 # fonts
 LARGE_FONT = ("Tahoma", 55)
