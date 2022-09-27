@@ -1,10 +1,11 @@
 import pygame, os, sys
 from pygame.locals import *
-from walls import Walls
-from snake import Snake
-from apple import *
 from tkinter import *
-from constants import *
+
+from src.walls import Walls
+from src.snake import Snake
+from src.apple import *
+from src.constants import *
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'  # center the window
 
