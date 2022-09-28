@@ -1,6 +1,7 @@
-from constants import *
-from random import randrange
 import pygame
+from random import randrange
+
+from .constants import *
 
 
 class Apple:
