@@ -11,7 +11,7 @@ from src.domain.snake_game import SnakeGame
 Window.size = (320, 280)
 
 
-class NewUserGreeting(GridLayout):
+class NewUserGreeting(GridLayout):  # TODO: create window collection and move the class from this file?
     def __init__(self, quit_callback, **kwargs):
         super(NewUserGreeting, self).__init__(**kwargs)
         from src.domain.models.user import GameUser

@@ -31,7 +31,7 @@ class SnakeGame:
 
         snake_gui.set_caption(f'Snake-{player.get_name()}')
 
-        self.walls_list = Walls(WallsType.EASY_PARALLEL).get_list(CELL_SIZE)
+        self.walls_list = Walls(WallsType.EASY_PARALLEL).get_list(CELL_SIZE)  # TODO: let the user choose what type of obstacles he wants
 
     @staticmethod
     def _print_text(text: str, color: Color, font=None, textpos=None):

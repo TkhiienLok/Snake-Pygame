@@ -20,7 +20,7 @@ class Snake(Drawable):
         self.lives = 5
 
     def is_alive(self) -> bool:
-        return self.lives >= 0
+        return self.lives > 0
 
     def speed_up(self):
         self.speed = 20

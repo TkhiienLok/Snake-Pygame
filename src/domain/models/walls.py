@@ -18,14 +18,14 @@ class Walls:
 
     def get_list(self, size) -> List[Position]:
         """Creates a list of wall coordinates"""
-
-        if self.walls_type == WallsType.EASY_PARALLEL:
-            return [
+        horizontal_walls = [
                 Position(coordinates=(0, 0), dimensions=(GAME_SCREEN_WIDTH, size)),
                 Position(coordinates=(0, GAME_SCREEN_HEIGHT - size), dimensions=(GAME_SCREEN_WIDTH, size)),
             ]
+        if self.walls_type == WallsType.EASY_PARALLEL:
+            return horizontal_walls
         if self.walls_type == WallsType.ROOM_FRAME:
-            return [
+            return horizontal_walls + [
                 Position(coordinates=(GAME_SCREEN_WIDTH - size, 0), dimensions=(size, GAME_SCREEN_HEIGHT)),  # right wall
                 Position(coordinates=(0, 0), dimensions=(size, GAME_SCREEN_HEIGHT))  # left wall
             ]
