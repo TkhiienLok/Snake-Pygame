@@ -107,3 +107,8 @@ conda list --export > requirements.txt
 ```
 
 
+## Run the app
+
+The app runs perfectly when starting via PyCharm menu, but not from the terminal yet.
+See [this pull request](https://github.com/TkhiienLok/Snake-Pygame/pull/18)
+
