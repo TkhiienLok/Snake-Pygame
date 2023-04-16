@@ -16,7 +16,7 @@ Double press makes the snake to speed up.
 
 Used libraries:
 - pygame
-- tkinter
+- kivy
 
 
 ## Setup
