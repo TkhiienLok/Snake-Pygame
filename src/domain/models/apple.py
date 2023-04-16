@@ -1,10 +1,12 @@
 import pygame
 from random import randrange
 
-from .constants import *
+from ..interfaces import Drawable, Displayable, Position
+
+from ..constants import *
 
 
-class Apple:
+class Apple(Drawable):
 
     count = 0
 
@@ -13,11 +15,8 @@ class Apple:
         self.y = randrange(1, ROW_COUNT-1)  # random vertical position
         self.size = size
         self.rect = pygame.Rect(self.x * CELL_SIZE, self.y * CELL_SIZE, self.size, self.size)
-        
-    def draw(self, screen):
-        pygame.draw.rect(screen, RED, self.rect)  # drawing red square apple
 
-    def set_random_xy(self):                    # change apple position
+    def set_random_position(self):                    # change apple position
         self.x = randrange(1, COL_COUNT-1)
         self.y = randrange(1, ROW_COUNT-1)
         
@@ -33,4 +32,19 @@ class Apple:
         self.rect.width = self.size
         self.rect.height = self.size
 
+    @property
+    def position(self) -> Position:
+        return Position(
+            coordinates=(self.x * CELL_SIZE, self.y * CELL_SIZE),
+            dimensions=(self.size, self.size)
+        )
 
+    @property
+    def drawable_objects_and_destinations(self):
+        return Displayable(
+            figures=[{
+                "color": RED,
+                "destination": self.position,
+            }],
+            images=[]
+        )
