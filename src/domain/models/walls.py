@@ -14,7 +14,7 @@ class Walls:
 
     def __init__(self, walls_type: WallsType):
         self.walls_type = walls_type
-        self.color = "blue"
+        self.color = BLUE
 
     def get_list(self, size) -> List[Position]:
         """Creates a list of wall coordinates"""

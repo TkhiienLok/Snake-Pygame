@@ -6,7 +6,9 @@ from ..constants import *
 
 
 DEFAULT_SPEED = 10
+SLOW_START_SPEED = 1
 FAST_SPEED = 20
+LIVES = 5
 
 
 class Snake(Drawable):
@@ -16,17 +18,17 @@ class Snake(Drawable):
         self.body = self.start_body_coordinates()
         self.direction = [-1, 0]
         self.old_key = ""
-        self.speed = 1
-        self.lives = 5
+        self.speed = SLOW_START_SPEED
+        self.lives = LIVES
 
     def is_alive(self) -> bool:
         return self.lives > 0
 
     def speed_up(self):
-        self.speed = 20
+        self.speed = FAST_SPEED
 
     def slow_down_default(self):
-        self.speed = 10
+        self.speed = DEFAULT_SPEED
 
     def set_direction(self, key: GameKeys):  # change the direction of snake
         if self.old_key == key:
