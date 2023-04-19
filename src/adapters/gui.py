@@ -3,9 +3,9 @@ from typing import Union, List
 
 import pygame
 
-from src.domain.interfaces import (
+from domain.interfaces import (
     FontType, Position, RGB, Displayable, Color, GameKeys, GameEvent, GameEventTypes)
-from src.domain.constants import GAME_SCREEN_WIDTH, GAME_SCREEN_HEIGHT, NORM_FONT, FPS_LIMIT
+from domain.constants import GAME_SCREEN_WIDTH, GAME_SCREEN_HEIGHT, NORM_FONT, FPS_LIMIT
 
 
 class SnakeGUIInterface(abc.ABC):

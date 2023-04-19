@@ -1,6 +1,6 @@
 from typing import List
 
-from src.adapters.gui import snake_gui
+from adapters.gui import snake_gui
 from ..interfaces import Drawable, Displayable, Position, GameKeys
 from ..constants import *
 

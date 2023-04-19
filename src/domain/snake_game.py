@@ -1,8 +1,8 @@
 import sys
 
-from src.adapters.gui import snake_gui
-from src.domain.interfaces import GameEventTypes, Result, Color
-from src.domain.constants import (
+from adapters.gui import snake_gui
+from domain.interfaces import GameEventTypes, Result, Color
+from domain.constants import (
     TILE_IMAGE,
     CELL_SIZE,
     SCORE_FONT,
@@ -12,11 +12,11 @@ from src.domain.constants import (
     BLUE,
     RED,
 )
-from src.domain.models.apple import Apple
-from src.domain.models.snake import Snake
-from src.domain.models.user import GameUser
-from src.domain.models.walls import Walls, WallsType
-from src.adapters.repository import save_result
+from domain.models.apple import Apple
+from domain.models.snake import Snake
+from domain.models.user import GameUser
+from domain.models.walls import Walls, WallsType
+from adapters.repository import save_result
 
 
 class SnakeGame:

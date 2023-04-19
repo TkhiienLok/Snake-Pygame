@@ -1,4 +1,4 @@
-from src.domain.interfaces import Result
+from domain.interfaces import Result
 
 
 def save_result(result: Result):
